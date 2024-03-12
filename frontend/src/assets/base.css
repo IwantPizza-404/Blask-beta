@@ -1,0 +1,60 @@
+@font-face{
+  font-family: Space-Grotesk;
+  src: url(./fonts/Space-Grotesk.ttf);
+}
+
+:root {
+  --accent-color: #DBF52F;
+  --alpha-bg: rgba(30, 30, 30, 0.5);
+  --bg-color: #090909;
+  --text-color: #fff;
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--text-color);
+  background: var(--bg-color);
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-family: Space-Grotesk;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+b{
+  font-weight: 500;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button{
+  background: none;
+  /* outline: none; */
+  border: none;
+  cursor: pointer;
+}
+
+a{
+  text-decoration: none;
+  color: var(--text-color);
+}

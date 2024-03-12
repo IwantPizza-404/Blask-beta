@@ -1,0 +1,88 @@
+@import url('./base.css');
+
+.container{
+  padding: 0 90px;
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+}
+
+.sec-title{
+  font-size: 56px;
+  font-weight: 600;
+}
+
+.sec-title_dot::after{
+  content: ".";
+  color: var(--accent-color);
+}
+
+.lock{
+  overflow: hidden;
+}
+
+
+/* @keyframes GrBanana{
+  0%{
+    transform: translate(0, 0) rotate(0);
+    opacity: 1;
+    d: path("M160.788 22.8461C345.727 103.018 550.679 90.8886 691.321 66.1572C796.288 47.6991 919.888 76.5135 944.255 180.268C959.307 244.365 948.812 312.631 863.728 352.537C780.109 391.756 637.589 332.526 503 326C456.823 323.761 407.591 331.314 360.003 343.726C215.103 381.517 41.5637 334.755 11.3059 188.096C-14.6903 62.0926 -0.660643 -47.1423 160.788 22.8461Z");
+  }
+  55%{
+    transform: translate(40px, 30px) rotate(4deg) scale(0.9);
+    opacity: 0.95;
+    d: path("M167.5 24.5C339.283 98.9686 521.84 80.1768 654.536 46.566C770.424 17.2126 929.808 77.489 848.615 165.234C831.517 183.711 807.095 201.509 773 217.5C689.381 256.719 621.589 286.526 487 280C440.933 277.766 391.825 285.278 344.343 297.637C199.304 335.388 20.8129 288.478 2.64102 139.713C-9.8192 37.7058 18.5109 -40.0874 167.5 24.5Z");
+  }
+  100%{
+    opacity: 1;
+    transform: translate(0, 0) rotate(0);
+    d: path("M160.788 22.8461C345.727 103.018 550.679 90.8886 691.321 66.1572C796.288 47.6991 919.888 76.5135 944.255 180.268C959.307 244.365 948.812 312.631 863.728 352.537C780.109 391.756 637.589 332.526 503 326C456.823 323.761 407.591 331.314 360.003 343.726C215.103 381.517 41.5637 334.755 11.3059 188.096C-14.6903 62.0926 -0.660643 -47.1423 160.788 22.8461Z");
+  }
+} */
+
+@keyframes GrBanana_glow{
+  0%{
+    transform: scale(0.86);
+    opacity: 0.8;
+  }
+  100%{
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .container{
+    padding: 0 45px;
+  }
+  .sec-title{
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 675px){
+  .sec-title{
+    font-size: 45px;
+  }
+  /* .page-sections, .page-wrapp{
+    gap: 120px;
+  } */
+}
+
+@media screen and (max-width: 550px){
+  .container{
+    padding: 0 30px;
+  }
+  .sec-title{
+    font-size: 38px;
+  }
+}
+
+@media screen and (max-width: 425px){
+  .container{
+    padding: 0 15px;
+  }
+  .page-sections{
+    gap: 120px;
+  }
+}
