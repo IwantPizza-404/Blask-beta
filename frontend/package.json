@@ -1,10 +1,11 @@
 {
-  "name": "blask",
-  "version": "0.0.0",
+  "name": "blask-frontend",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "serve": "vite serve",
     "build": "vite build",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist"

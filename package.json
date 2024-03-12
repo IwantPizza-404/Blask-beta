@@ -1,0 +1,12 @@
+{
+    "name": "blask",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "concurrently \"npm run start-frontend\" \"npm run start-backend\"",
+        "start-frontend": "cd frontend && npm run serve",
+        "start-backend": "cd backend && npm start"
+    },
+    "devDependencies": {
+        "concurrently": "^6.5.1"
+    }
+}
