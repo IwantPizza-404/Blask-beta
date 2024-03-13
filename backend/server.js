@@ -1,12 +1,15 @@
 const express = require('express');
-const cors = require('cors');
+// const cors = require('cors');
 const bodyParser = require('body-parser');
 const sqlite3 = require('sqlite3').verbose();
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
-app.use(cors());
+const path = require('path');
+app.use(express.static(path.join(__dirname, '../frontend/dist')));
+
+// app.use(cors());
 app.use(bodyParser.json());
 
 // Connect to SQLite database
@@ -29,6 +32,6 @@ app.post('/api/messages', (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });

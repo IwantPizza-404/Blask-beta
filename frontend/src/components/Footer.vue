@@ -11,7 +11,7 @@ export default{
     methods:{
         async submitMessage() {
             try{
-                const response = await this.$axios.post('http://localhost:3000/api/messages', {
+                const response = await this.$axios.post(`/api/messages`, {
                     email: this.email,
                     message: this.message,
                 });
