@@ -37,7 +37,8 @@
         <nav :class="{'header_nav': true, 'opened': this.NavShow}">
           <ul :class="{'nav-links': true, 'hovered': this.IsHover}">
             <li v-for="link in this.nav_links" class="nav-link">
-              <a :href="link.link"
+              <a 
+                :href="link.link"
                 v-on="NavShow ? {click: () => ToggleNav()} : {}"
                 @mouseover=" this.IsHover = true" 
                 @mouseleave=" this.IsHover = false"

@@ -38,7 +38,7 @@
                     data-aos-duration="300"
                     data-aos-delay="400"
                 >
-                    <a href="https://blobla-production.up.railway.app" class="card-wrapp">
+                    <a href="https://github.com/IwantPizza-404/Blobla" class="card-wrapp">
                         <div class="card-header">
                             <div class="card-tag">Back-end</div>
                             <div class="card-title">

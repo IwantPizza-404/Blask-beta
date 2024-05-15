@@ -59,6 +59,13 @@ export default{
                         <h3 class="card-title feature-plus">04</h3>
                         <h4 class="card-subtitle">Years of experience</h4>
                     </div>
+                    <span 
+                        class="f-decor"
+                        data-aos="bright"
+                        data-aos-duration="400"
+                        data-aos-delay="300"
+                    >
+                    </span>
                 </div>
             </div>
         </div>
@@ -135,8 +142,8 @@ export default{
         content: "+";
         color: var(--accent-color);
     }
-    .about_features::after{
-        content: "";
+
+    .f-decor{
         position: absolute;
         width: 200px;
         height: 200px;
@@ -170,6 +177,15 @@ export default{
     [data-aos='zoom-cus'].aos-animate{
         transform: scale(1);
         opacity: 1;
+    }
+
+    [data-aos='bright']{
+        opacity: 0;
+        transition-property: transform, opacity;
+    }
+
+    [data-aos='bright'].aos-animate{
+        opacity: .5;
     }
 
 

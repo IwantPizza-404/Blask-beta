@@ -26,6 +26,13 @@
       MouseOut(){
         this.$refs.scrollbtn.style.transform = `translate(0px, 0px)`
       },
+
+      downloadFile() {
+        const link = document.createElement('a')
+        link.href = 'files/CV.pdf'
+        link.download = 'CV.pdf'
+        link.click()
+      }
     }
   }
 </script>
@@ -48,10 +55,10 @@
           </div>
           <div class="hero-btns" data-aos="fade" data-aos-duration="500" data-aos-delay="1000">
             <div class="contact-btn">
-              <a href="#">Let’s Talk</a>
+              <a href="https://t.me/yuus_xyz">Let’s Talk</a>
             </div>
             <div class="cv-btn">
-              <a href="#">
+              <button @click="downloadFile">
                 <span>Download CV</span>
                 <svg width="40" height="41" viewBox="0 0 40 41" color-interpolation-filters="sRGB" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="1" y="1.5" width="38" height="38" rx="13" stroke="white" stroke-width="2"/>
@@ -66,7 +73,7 @@
                     </clipPath>
                   </defs>
                 </svg>
-              </a>
+              </button>
             </div>
           </div>
           <div class="scroll-btn_wrapp">
@@ -156,15 +163,16 @@
     background: linear-gradient(60deg, rgba(255, 255, 255, 0.2), rgba(219, 245, 47, 0.3));
 }
 
-.cv-btn, .cv-btn a{
+.cv-btn, .cv-btn button{
     display: flex;
 }
-.cv-btn a{
+.cv-btn button{
     justify-content: center;
     align-items: center;
     height: 58px;
     font-size: 22px;
     gap: 15px;
+    color: #fff;
 }
 .gr-banana{
     z-index: -1;
@@ -301,7 +309,7 @@
     flex-direction: column;
   }
 
-  .contact-btn, .cv-btn, .contact-btn a, .cv-btn a{
+  .contact-btn, .cv-btn, .contact-btn a, .cv-btn button{
     width: 100%;
     height: 55px;
     font-size: 22px;
