@@ -26,7 +26,12 @@
 </script>
 
 <template>
-  <header class="header">
+  <header
+    data-aos="fade"
+    data-aos-duration="500"
+    data-aos-delay="300" 
+    class="header"
+  >
     <div class="container">
       <div class="header-wrapp">
         <div class="header_logo">
