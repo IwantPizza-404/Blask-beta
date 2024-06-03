@@ -74,6 +74,7 @@
 
 <style>
 .header{
+  transform: none !important;
   display: flex;
   padding: 20px 0;
   z-index: 1;
