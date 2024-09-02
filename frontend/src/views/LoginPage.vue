@@ -1,4 +1,3 @@
-<!-- LoginPage.vue -->
 <script>
 import axios from 'axios';
 
