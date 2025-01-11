@@ -5,6 +5,7 @@ const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const JWT_SECRET = process.env.JWT_SECRET || 'o7fZxR2nE#b!';
 
 // Serve static files from the frontend dist directory
 app.use(express.static(path.join(__dirname, '../frontend/dist')));
@@ -12,7 +13,7 @@ app.use(express.static(path.join(__dirname, '../frontend/dist')));
 app.use(express.json());
 
 // Connect to SQLite database
-const db = new sqlite3.Database('messages.db');
+const db = new sqlite3.Database(path.join(__dirname, 'messages.db'));
 
 // Create messages table if not exists
 db.run('CREATE TABLE IF NOT EXISTS messages (id INTEGER PRIMARY KEY AUTOINCREMENT, email TEXT, message TEXT)');
@@ -59,7 +60,7 @@ app.post('/api/login', (req, res) => {
 
 // Function to generate JWT token
 function generateToken(payload) {
-  return jwt.sign(payload, 'o7fZxR2nE#b!', { expiresIn: '1h' });
+  return jwt.sign(payload, JWT_SECRET, { expiresIn: '1h' });
 }
 
 // Catch-all route to serve index.html for all non-API requests

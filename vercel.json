@@ -8,6 +8,10 @@
     {
       "src": "frontend/dist/**/*",
       "use": "@vercel/static"
+    },
+    {
+      "src": "backend/messages.db",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
